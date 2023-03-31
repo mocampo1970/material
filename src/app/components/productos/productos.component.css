@@ -1,0 +1,20 @@
+.container {
+    border: 5px solid darkblue;
+    width: 1800px;
+    margin: 5%;
+    padding: 5%;
+  }
+
+  /* Tabla con fot-size coloca la letra pequeña*/
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid purple;
+    font-size: small;
+  }
+
+  /* paginacion coloca la letra pequeña*/
+  pagination-controls {
+      font-size: small;
+  }

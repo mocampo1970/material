@@ -1,0 +1,103 @@
+<mat-toolbar class="mat-elevation-z8">
+    <button
+      mat-icon-button
+      *ngIf="sidenav.mode === 'over'"
+      (click)="sidenav.toggle()"
+    >
+      <mat-icon *ngIf="!sidenav.opened"> menu </mat-icon>
+      <mat-icon *ngIf="sidenav.opened"> close </mat-icon>
+    </button>
+    Responsive side navigation
+  </mat-toolbar>
+  
+  <mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+      <!--src="https://source.unsplash.com/c_GmwfHBDzk/200x200"-->
+      <!--<img
+        class="avatar mat-elevation-z8"
+        src="assets/img/Familia.jpg"        
+      />-->
+  
+      <h4 class="name">Mauricio Ocampo</h4>
+      <p class="designation">Software Engineer - Ingeniero de software</p>
+      <img src="assets/img/Familia.jpg">
+      <!--<img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Soufiane FADIL">-->
+  
+      <mat-divider></mat-divider>
+  
+      <!-- El mat-icon se encuentran buscando en google mat-icon list 
+          https://www.angularjswiki.com/angular/angular-material-icons-list-mat-icon-list/ -->
+      <button mat-button class="menu-button" routerLink="/home">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-button class="menu-button" routerLink="/profile">
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </button>
+  
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button" [routerLink]="['/productos/']" >
+        <mat-icon> local_parking</mat-icon>
+        <span>Productos</span>
+      </button>
+
+      <button mat-button class="menu-button" routerLink="/paises">
+        <mat-icon>public</mat-icon>
+        <span>Paises</span>
+      </button> 
+      
+
+      <button mat-button class="menu-button" routerLink="/ciudades">
+        <mat-icon>location_city</mat-icon>
+        <span>Ciudades</span>
+      </button>
+
+      <button mat-button class="menu-button" routerLink="/clientes">
+        <mat-icon>group</mat-icon>
+        <span>Clientes</span>
+      </button> 
+      
+      <button mat-button class="menu-button" routerLink="/pedidos">
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Pedidos</span>
+      </button>  
+      
+      <button mat-button class="menu-button" routerLink="/clientes">
+        <mat-icon>sentiment_satisfied_alt</mat-icon>
+        <span>Proveedores</span>
+      </button>   
+      
+      <button mat-button class="menu-button" routerLink="/ciudades">
+        <mat-icon>flight_takeoff</mat-icon>
+        <span>ejemplo4</span>
+      </button>   
+      
+      <button mat-button class="menu-button" routerLink="/ciudades">
+        <mat-icon>group_work</mat-icon>
+        <span>ejemplo5</span>
+      </button>
+
+      <button mat-button class="menu-button" routerLink="/productos">
+        <mat-icon>pan_tool</mat-icon>
+        <span>menu6</span>
+      </button>    
+      
+      <button mat-button class="menu-button" routerLink="/ciudades">
+        <mat-icon>photo_library</mat-icon>
+        <span>menu7</span>
+      </button>    
+
+      <button mat-button class="menu-button" routerLink="/paises">
+        <mat-icon>sentiment_very_satisfied</mat-icon>
+        <span>menu8</span>
+      </button>
+  
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="content mat-elevation-z8">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
